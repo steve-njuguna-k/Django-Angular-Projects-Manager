@@ -1,0 +1,16 @@
+<div class="form-group row">
+    <div class="col-12">
+        <div class="form-group mb-3">
+            <label>Category Name</label>
+            <input type="text" class="form-control" [(ngModel)]="CategoryName" placeholder="Enter Category Name">
+        </div>
+    </div>
+</div>
+
+<button (click)="addCategory()" *ngIf="category.CategoryID==0" class="btn btn-primary btn-block">
+    Add
+</button>
+
+<button (click)="updateCategory()" *ngIf="category.CategoryID!=0" class="btn btn-primary btn-block">
+    Update
+</button>

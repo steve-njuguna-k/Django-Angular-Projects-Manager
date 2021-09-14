@@ -1,0 +1,58 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-group row">
+    
+        <div class="col-12">
+            <div class="form-group mb-3">
+                <label>Project Name</label>
+                <input type="text" class="form-control" [(ngModel)]="ProjectName" placeholder="Enter Project Name">
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <div class="form-group mb-3">
+                <label>Category</label>
+                <select class="form-control" [(ngModel)]="ProjectCategory">
+                    <option>--Select--</option>
+                    <option *ngFor="let catName of CategoryList">{{catName.CategoryName}}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <div class="form-group mb-3">
+                <label>Budget</label>
+                <input type="number" class="form-control" [(ngModel)]="Budget" placeholder="Enter Project Budget">
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <div class="form-group mb-3">
+                <label>Member Allocated</label>
+                <select class="form-control" [(ngModel)]="MemberAllocated">
+                   <option>--Select--</option>
+                   <option *ngFor="let membName of MemberList">
+                       {{membName.MemberName}}
+                   </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <div class="form-group mb-3">
+                <label>Due Date</label>
+                <input type="date" class="form-control" [(ngModel)]="DueBy">
+            </div>
+        </div>
+    
+    </div>
+</div>
+    
+    
+<button (click)="addProject()" *ngIf="project.ProjectID==0" class="btn btn-primary btn-block">
+    Add
+</button>
+    
+<button (click)="updateProject()" *ngIf="project.ProjectID!=0" class="btn btn-primary btn-block">
+    Update
+</button>

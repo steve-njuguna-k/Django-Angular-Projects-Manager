@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <!-- For demo purpose -->
+  <div class="row mb-4">
+    <div class="col-lg-8 mx-auto text-center">
+      <h1 class="display-4">Project Management</h1>
+      <p class="lead mb-0">A Simple Project Register for Creating, Reading, Updating <br> & Deleting Project Information</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-lg-4 mx-auto text-center">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button routerLink="projects" class="btn btn-primary btn-md">Projects</button>
+        <button routerLink="tasks" class="btn btn-primary btn-md">Tasks</button>
+        <button  routerLink="categories" class="btn btn-primary">Categories</button>
+        <button routerLink="members" class="btn btn-primary btn-md">Members</button>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
